@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<script>
+
+	
+
+	
+	  
+	let value1=new Promise(function(resolve,reject){
+		
+	let value=true;
+	let n1=parseInt(prompt("Enter a first number"))
+	if(value){
+		
+		resolve(n1)
+	}
+	else{
+		reject(10)
+	}
+		
+	})
+	
+	
+	let value2=new Promise(function(resolve,reject){
+		
+	let value=true;
+	let n2=parseInt(prompt("Enter a second number"))
+	if(value){
+		
+		resolve(n2)
+	}
+	else{
+		reject(10)
+	}
+		
+	})
+	
+	
+	
+	
+	let value3=new Promise(function(resolve,reject){
+		
+	let value=true;
+	let n3=parseInt(prompt("Enter a third number"))
+	if(value){
+		
+		resolve(n3)
+	}
+	else{
+		reject(20)
+	}
+		
+	})
+	
+	
+	Promise.all([value1,value2,value3]).then((msg)=>{
+		
+		let sum=0;
+		
+		for(i=0;i<msg.length;i++){
+			
+		    sum+=msg[i]
+		
+		    
+		}
+		    
+		let avg=sum/msg.length	
+		
+		document.write(avg)
+		
+		
+	})
+
+
+</script>
+</body>
+</html>
